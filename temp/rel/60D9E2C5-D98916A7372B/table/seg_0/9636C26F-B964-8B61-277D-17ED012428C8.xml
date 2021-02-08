@@ -1,0 +1,191 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9636C26F-B964-8B61-277D-17ED012428C8" schemaObject="DE0B376D-3C95-9439-7E97-4E9535B7801C" name="LOCATIONS">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOCATIONS</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Locations table that contains specific address of a specific office,
+warehouse, and/or production site of a company. Does not store addresses /
+locations of customers. Contains 23 rows; references with the
+departments and countries tables. ]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>F50BF1AA-6A77-32EF-7AB1-A389F97F57E3</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOCATION_ID" id="A3536CC9-B2E0-31C3-6314-383DDE5A13A0">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary key of locations table]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>527EE1F0-573A-2F7E-344D-DD85D9FE4658</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STREET_ADDRESS" id="212A8F90-6453-6101-2572-79D6DCF4ECD2">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street address of an office, warehouse, or production site of a company.
+Contains building number and street name]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>22C8197A-807F-D103-F28C-9B86D9E356C9</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="POSTAL_CODE" id="857B7C86-6085-6F51-D6A0-146328D36F48">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Postal code of the location of an office, warehouse, or production site
+of a company. ]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>4935DDBB-D303-9075-A32F-3263039B1A56</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12 BYTE</dataTypeSize>
+<ownDataTypeParameters>12 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITY" id="4CCD8445-8801-0308-5E8F-30238752E073">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column that shows city where an office, warehouse, or
+production site of a company is located. ]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>456BBA8B-51B5-2D55-C22C-E21D9883E2CE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>LOC_CITY_NN</notNullConstraintName>
+</Column>
+<Column name="STATE_PROVINCE" id="0E341A35-F60A-E38E-8EC4-884787F21F62">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[State or Province where an office, warehouse, or production site of a
+company is located.]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>4C6BDD8A-3320-7546-6B37-698DB98380C3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COUNTRY_ID" id="15BDAB90-D055-9EAE-CE24-DA1A65BBDD45">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Country where an office, warehouse, or production site of a company is
+located. Foreign key to country_id column of the countries table.]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>C4B22764-F37A-B552-9A9D-751A205ABA2D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="96B4DC62-9682-103C-4E15-676EE91D2748" referredColumn="A7D5182B-77E4-B2A0-CE3F-F89A18C75D26"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="447B5FB4-5B7D-EB8F-680F-6664D8AF4819" name="LOC_ID_PK">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOC_ID_PK</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>F51A281B-B82C-8E46-42A6-2A090335D384</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3536CC9-B2E0-31C3-6314-383DDE5A13A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6484FAB-4779-2692-4ABA-8432BF30FD9A" schemaObject="DE0B376D-3C95-9439-7E97-4E9535B7801C" name="LOC_CITY_IX">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOC_CITY_IX</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>7C1324B7-72BF-D316-FDCD-A06B9BAC226D</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CCD8445-8801-0308-5E8F-30238752E073"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4F1E514-96CD-C260-FAE2-9740CE3CA181" schemaObject="DE0B376D-3C95-9439-7E97-4E9535B7801C" name="LOC_COUNTRY_IX">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOC_COUNTRY_IX</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>2123C115-8D61-E0AF-39A7-77C92AE12413</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15BDAB90-D055-9EAE-CE24-DA1A65BBDD45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC486E6D-DCF7-5DDF-26DC-20EA0F705AD4" schemaObject="DE0B376D-3C95-9439-7E97-4E9535B7801C" name="LOC_ID_PK">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOC_ID_PK</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>0BF24E58-D805-07B0-46DF-D14A5EFDA6A6</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3536CC9-B2E0-31C3-6314-383DDE5A13A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F37D7374-E49A-1D66-4F86-9AFBF1846B74" schemaObject="DE0B376D-3C95-9439-7E97-4E9535B7801C" name="LOC_STATE_PROVINCE_IX">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOC_STATE_PROVINCE_IX</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>480948A9-BDF6-A696-93F1-FADC68C4DA85</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E341A35-F60A-E38E-8EC4-884787F21F62"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="49A49BB9-A8B2-0F71-C6BD-535B7A196EAE" name="LOC_C_ID_FK">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15BDAB90-D055-9EAE-CE24-DA1A65BBDD45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

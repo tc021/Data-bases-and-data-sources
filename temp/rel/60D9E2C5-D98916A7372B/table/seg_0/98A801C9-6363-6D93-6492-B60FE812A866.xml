@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="98A801C9-6363-6D93-6492-B60FE812A866" schemaObject="756BC6FF-918E-7F91-98CD-B944558D3DB3" name="COUNTRIES">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>SYPNIK</sourceObjSchema>
+<sourceObjName>COUNTRIES</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COUNTRY_ID" id="1320D7D4-5177-9CFB-1DC0-9B6F4CBC0C19">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>COUNTRIES</sourceObjSchema>
+<sourceObjName>COUNTRY_ID</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 BYTE</dataTypeSize>
+<ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COUNTRY_NAME" id="F75D38A6-49C0-CCC4-F0C7-3401136D2A84">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>COUNTRIES</sourceObjSchema>
+<sourceObjName>COUNTRY_NAME</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 BYTE</dataTypeSize>
+<ownDataTypeParameters>40 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REGION_ID" id="543A7DB6-5F69-9450-902D-672165F9D90E">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>COUNTRIES</sourceObjSchema>
+<sourceObjName>REGION_ID</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

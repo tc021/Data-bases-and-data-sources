@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="SYPNIK" directorySegmentName="seg_0" id="60911B63-2D16-14D6-ABF7-048AA3CF2F2D">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjName>SYPNIK</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:37 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<schemaObject>756BC6FF-918E-7F91-98CD-B944558D3DB3</schemaObject>
+<defTableSpace>BCE63533-849A-B44D-E882-A3EB8D70F548</defTableSpace>
+<quotaItems>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem1" id="A1CB8136-9A04-8068-F2DE-8E6BB26BFF8D">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<size>31457280</size>
+<tableSpace>BCE63533-849A-B44D-E882-A3EB8D70F548</tableSpace>
+</QuotaItem>
+</quotaItems>
+</UserOraclev10g>

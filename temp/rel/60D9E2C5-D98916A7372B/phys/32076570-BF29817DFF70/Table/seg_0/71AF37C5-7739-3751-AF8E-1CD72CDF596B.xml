@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="COUNTRIES" directorySegmentName="seg_0" id="71AF37C5-7739-3751-AF8E-1CD72CDF596B">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<schemaObject>DE0B376D-3C95-9439-7E97-4E9535B7801C</schemaObject>
+<iotPctThreshold>50</iotPctThreshold>
+<logging>NO</logging>
+<organization>INDEX</organization>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>16FF61CA-F1F8-0525-0AA2-D6DA629A7E4B</segment>
+<tableSpace>54808B1E-4FF8-17C7-D5AC-21B7B2132CC8</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="COUNTRY_ID" id="A7D5182B-77E4-B2A0-CE3F-F89A18C75D26">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="REGION_ID" id="AA7AC49D-675D-4E5E-EB40-4A6CF8607936">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COUNTRY_NAME" id="DF67871C-9F84-B29C-B360-D6544ED3819F">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="COUNTR_REG_FK" id="2EBBB9AC-6D84-BD05-A9D0-1EA441F64C1A">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="COUNTRY_C_ID_PK" id="0AD1F8E5-8252-11D6-8219-26FCAD969831">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<schemaObject>DE0B376D-3C95-9439-7E97-4E9535B7801C</schemaObject>
+<logging>NO</logging>
+<segment>16FF61CA-F1F8-0525-0AA2-D6DA629A7E4B</segment>
+<tableSpace>54808B1E-4FF8-17C7-D5AC-21B7B2132CC8</tableSpace>
+<indexSegment>16FF61CA-F1F8-0525-0AA2-D6DA629A7E4B</indexSegment>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CB274ADB-10E1-E77E-55FD-EB9E2DCF7FEE" schemaObject="756BC6FF-918E-7F91-98CD-B944558D3DB3" name="JOB_GRADES">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>SYPNIK</sourceObjSchema>
+<sourceObjName>JOB_GRADES</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="GRADE" id="5F10FF3A-07B2-9D34-3204-F8492DC05721">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>JOB_GRADES</sourceObjSchema>
+<sourceObjName>GRADE</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MIN_SALARY" id="8E6C99F4-DFF5-E6CC-DC80-3C5FB5817FDA">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>JOB_GRADES</sourceObjSchema>
+<sourceObjName>MIN_SALARY</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAX_SALARY" id="565C263D-111C-15A4-C504-2929F22345D1">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>JOB_GRADES</sourceObjSchema>
+<sourceObjName>MAX_SALARY</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

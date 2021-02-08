@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="LOGOWANIE" directorySegmentName="seg_0" id="727859BE-1F31-B2BA-E96C-7E37A42A8745">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>LOGOWANIE</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:30 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[DECLARE
+polecenie varchar2(200);
+BEGIN
+INSERT INTO logi VALUES(CURRENT_TIMESTAMP, USER,new.country_name);
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<owner>1808A3E7-115E-2AA0-E86D-4890C5EF1F0F</owner>
+<scope>FOR EACH STATEMENT</scope>
+<table>71AF37C5-7739-3751-AF8E-1CD72CDF596B</table>
+</TriggerOraclev10g>

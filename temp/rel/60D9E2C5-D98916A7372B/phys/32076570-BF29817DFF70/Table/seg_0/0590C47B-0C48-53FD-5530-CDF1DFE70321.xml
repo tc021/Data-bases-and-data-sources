@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="DEPARTMENTS" directorySegmentName="seg_0" id="0590C47B-0C48-53FD-5530-CDF1DFE70321">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<schemaObject>756BC6FF-918E-7F91-98CD-B944558D3DB3</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>A2DFEE66-D711-8648-5D3A-80313383FCE1</segment>
+<tableSpace>BCE63533-849A-B44D-E882-A3EB8D70F548</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DEPARTMENT_ID" id="43988878-BE11-2EED-2A3E-D2A32917B44F">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOCATION_ID" id="585CA17F-3118-7303-32CE-C6A2EF0842E5">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MANAGER_ID" id="A4B4C572-7FC6-A4E3-BE9D-813166C50300">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DEPARTMENT_NAME" id="E98C18AE-FC6F-5700-30DF-BB5476FC37F4">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>

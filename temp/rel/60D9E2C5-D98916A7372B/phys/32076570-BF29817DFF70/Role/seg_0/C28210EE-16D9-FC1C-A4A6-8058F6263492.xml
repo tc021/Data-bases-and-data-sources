@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<RoleOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.RoleOraclev10g" name="STUDENT" directorySegmentName="seg_0" id="C28210EE-16D9-FC1C-A4A6-8058F6263492">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjName>STUDENT</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:31 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<permissions>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions1" id="B0D1915D-0F09-56BD-D954-1381DD43E55C">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>71AF37C5-7739-3751-AF8E-1CD72CDF596B</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions2" id="FA916DC8-1FC3-FD86-2FBD-048B494A2DA7">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>0B1EADD4-600A-E50C-B02E-44BF5057052C</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions3" id="3D0759EE-7365-B3C3-BB58-51F11606F44A">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>CD5240F1-B562-61DE-6868-BC1677893F33</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions4" id="00182BCC-528A-875C-5B87-DAD453AF604E">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>430C297C-9A92-F5CC-567F-86C6B42A2611</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions5" id="6137A764-C8B5-096A-3A5C-F86525D38694">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>5FD71A27-A4DA-4B78-3EC6-C0FF19E88651</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions6" id="3999C180-7C5E-0566-5368-906B2BC2AEA5">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>ED1FD33A-745A-72DC-02BE-46BB12764301</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions7" id="205D06F8-D7FA-5EF8-2B0D-8E57AEE36D8A">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>9636C26F-B964-8B61-277D-17ED012428C8</table>
+</Permission>
+<Permission class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PermissionsOraclev10g" name="Permissions8" id="32BF46CC-CFF9-5DF7-74EB-8637D59F81AB">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<privileges>SELECT</privileges>
+<table>0F8BDC9F-EFFC-C199-6A71-1988160625C5</table>
+</Permission>
+</permissions>
+</RoleOraclev10g>

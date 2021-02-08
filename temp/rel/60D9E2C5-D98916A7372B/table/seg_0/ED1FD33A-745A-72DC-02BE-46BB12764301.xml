@@ -1,0 +1,221 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ED1FD33A-745A-72DC-02BE-46BB12764301" schemaObject="DE0B376D-3C95-9439-7E97-4E9535B7801C" name="JOB_HISTORY">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JOB_HISTORY</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Table that stores job history of the employees. If an employee
+changes departments within the job or changes jobs within the department,
+new rows get inserted into this table with old job information of the
+employee. Contains a complex primary key: employee_id+start_date.
+Contains 25 rows. References with jobs, employees, and departments tables.]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>F81D942F-4641-A96E-C6A8-86EB67F59FC4</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPLOYEE_ID" id="2DC58F82-41A4-C361-BC08-ACC64A69FB7C">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column in the complex primary key employee_id+start_date.
+Foreign key to employee_id column of the employee table]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>6D45C6AB-306F-A315-CDB9-8771B1D234A1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_EMPLOYEE_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="5F673714-FCE2-1CF0-C4E6-0403C51DD7AF" referredColumn="B3DE95CE-64E3-0FAB-6715-87B1A492E06A"/>
+</associations>
+</Column>
+<Column name="START_DATE" id="CB9FFE8C-24E4-73AD-EADF-B075C41A37C6">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[A not null column in the complex primary key employee_id+start_date.
+Must be less than the end_date of the job_history table. (enforced by
+constraint jhist_date_interval)]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>66D297C9-E2D6-9D57-D9A9-A1087C1E3FB4</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_START_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="END_DATE" id="31C140AC-D1E6-3F11-DEE1-A17BAF282738">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Last day of the employee in this job role. A not null column. Must be
+greater than the start_date of the job_history table.
+(enforced by constraint jhist_date_interval)]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>12B887ED-A238-45D3-E17C-C9D883D025BD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_END_DATE_NN</notNullConstraintName>
+</Column>
+<Column name="JOB_ID" id="459D6B75-D13E-49C9-7B31-874461B491CC">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Job role in which the employee worked in the past; foreign key to
+job_id column in the jobs table. A not null column.]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>8706BCA6-C901-C02F-D407-1459E8DAAFAD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>JHIST_JOB_NN</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="E8543E3A-021A-BE8F-C331-14ADF2C77255" referredColumn="6301E448-2E15-4BAB-A47C-97BF2E4357EC"/>
+</associations>
+</Column>
+<Column name="DEPARTMENT_ID" id="E1E2816C-BADF-43D5-4D39-E30B28299297">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Department id in which the employee worked in the past; foreign key to deparment_id column in the departments table]]></commentInRDBMS>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>52C58173-15F0-FFEC-D5C7-C9435B7AFA12</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,4,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="26D63B28-76F3-8583-F011-45F8B3B900EB" referredColumn="9E7889DE-94D5-805F-E8A0-9B922A59551B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="77924E0A-7C3F-3B92-32D3-1828E43181CA" name="JHIST_EMP_ID_ST_DATE_PK">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_EMP_ID_ST_DATE_PK</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>8899704B-0BBF-8D9C-1ED9-88A85278D22B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DC58F82-41A4-C361-BC08-ACC64A69FB7C"/>
+<colUsage columnID="CB9FFE8C-24E4-73AD-EADF-B075C41A37C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF3DE2E5-6049-EBA6-8C3C-2B54FF346CC5" schemaObject="DE0B376D-3C95-9439-7E97-4E9535B7801C" name="JHIST_DEPARTMENT_IX">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_DEPARTMENT_IX</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>8BDACA91-323D-794B-718D-75CA8B0D1410</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E1E2816C-BADF-43D5-4D39-E30B28299297"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="42CAED22-4F86-1B25-1D3F-F2FAC9A76C74" schemaObject="DE0B376D-3C95-9439-7E97-4E9535B7801C" name="JHIST_EMP_ID_ST_DATE_PK">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_EMP_ID_ST_DATE_PK</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>9B6B6B94-C3D2-3C2D-4645-FEA75E0648E4</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DC58F82-41A4-C361-BC08-ACC64A69FB7C"/>
+<colUsage columnID="CB9FFE8C-24E4-73AD-EADF-B075C41A37C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E3F7474E-BA40-3E82-7CBA-8378607C0902" schemaObject="DE0B376D-3C95-9439-7E97-4E9535B7801C" name="JHIST_EMPLOYEE_IX">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_EMPLOYEE_IX</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>30433197-9D12-5448-4FAF-BE4E4DF7C324</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DC58F82-41A4-C361-BC08-ACC64A69FB7C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="80A5126E-4C3B-428C-C64D-73AEC2B6604C" schemaObject="DE0B376D-3C95-9439-7E97-4E9535B7801C" name="JHIST_JOB_IX">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_JOB_IX</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>1E8C43A6-E1DD-7510-8236-ED6DE5B98D15</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="459D6B75-D13E-49C9-7B31-874461B491CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45EDF4DA-B7E6-C0FF-C30B-379F1490FDBB" name="JHIST_DEPT_FK">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E1E2816C-BADF-43D5-4D39-E30B28299297"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27F18ADF-110B-0866-8512-EFD81F80DE28" name="JHIST_EMP_FK">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DC58F82-41A4-C361-BC08-ACC64A69FB7C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5344E0F1-92F9-725B-B572-D1138EB72DA7" name="JHIST_JOB_FK">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="459D6B75-D13E-49C9-7B31-874461B491CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="JHIST_DATE_INTERVAL" directorySegmentName="seg_0" id="4B454841-10EA-B556-0048-B5EC1DBF70CD">
+<sourceConnName>DBDS</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>JHIST_DATE_INTERVAL</sourceObjName>
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>9696385F-8661-6B1D-C751-1D68AC0A32BA</importedID>
+<rule><![CDATA[end_date > start_date]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

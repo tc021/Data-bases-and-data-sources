@@ -1,0 +1,19 @@
+create or replace procedure procedure_b(idj varchar2, Job_title varchar) is
+e_invalid_id exception;
+begin
+update jobs
+set job_title = Job_title
+where
+job_id = idj;
+
+if SQL%NOTFOUND then
+raise e_invalid_id;
+else
+dbms_output.put_line('Record Updated');
+end if;
+exception 
+when e_invalid_id then
+dbms_output.put_line('No sucj id '|| sqlerrm || ' ' || sqlcode);
+when others then
+dbms_output.put_linee('Others');
+end;

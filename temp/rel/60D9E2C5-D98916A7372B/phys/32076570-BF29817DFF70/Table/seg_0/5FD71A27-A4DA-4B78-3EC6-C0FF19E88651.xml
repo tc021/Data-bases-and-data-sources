@@ -1,0 +1,44 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="JOB_GRADES" directorySegmentName="seg_0" id="5FD71A27-A4DA-4B78-3EC6-C0FF19E88651">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<schemaObject>DE0B376D-3C95-9439-7E97-4E9535B7801C</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>A2DFEE66-D711-8648-5D3A-80313383FCE1</segment>
+<tableSpace>BCE63533-849A-B44D-E882-A3EB8D70F548</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="MAX_SALARY" id="5436C3D3-EB73-59CE-DA7E-325230C36290">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="GRADE" id="B9DA70EC-484C-433B-873B-E9020D5AC354">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MIN_SALARY" id="F7453381-4B24-21D1-DF80-4E4696A37B6A">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="JOB_GRADES_PK" id="FD413CF1-A83C-0051-BFBD-5BA7CB82657B">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 16:25:40 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<schemaObject>DE0B376D-3C95-9439-7E97-4E9535B7801C</schemaObject>
+<segment>16FF61CA-F1F8-0525-0AA2-D6DA629A7E4B</segment>
+<tableSpace>BCE63533-849A-B44D-E882-A3EB8D70F548</tableSpace>
+<indexSegment>16FF61CA-F1F8-0525-0AA2-D6DA629A7E4B</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

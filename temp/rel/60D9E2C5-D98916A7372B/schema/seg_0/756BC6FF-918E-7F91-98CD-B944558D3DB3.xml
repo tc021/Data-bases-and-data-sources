@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="SYPNIK" directorySegmentName="seg_0" id="756BC6FF-918E-7F91-98CD-B944558D3DB3">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<importedID>5780D1E6-0508-9705-BCCB-1D57581EC1E1</importedID>
+</SchemaObject>

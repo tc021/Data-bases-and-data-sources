@@ -1,0 +1,22 @@
+install.packages("DBI")
+install.packages("odbc")
+install.packages("RODBC")
+library(DBI)
+library(odbc)
+library(RODBC)
+
+con <- dbConnect(rodbc,
+                 Driver = "psqlodbcw.so",
+                 Server = "213.184.8.44",
+                 Host = 'wmii-pawel-pc',
+                 pwd = "H20m0721",
+                 uid="253",
+                 Trusted_connection = "TRUE",
+                 
+                )
+
+
+con <- dbConnect(odbc::odbc(), 
+                 .connection_string = 'driver={Devart ODBC Driver for Oracle};server=213.184.8.44;service_name = orac;database=orac;trusted_connection=true')
+
+t1 <- odbcConnect('213.184.8.44',uid='sypnik',pwd='H20m0721')

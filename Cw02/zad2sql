@@ -1,0 +1,67 @@
+DROP TABLE REGIONS CASCADE CONSTRAINTS;
+DROP TABLE COUNTRIES CASCADE CONSTRAINTS;
+DROP TABLE LOCATIONS CASCADE CONSTRAINTS;
+DROP TABLE DEPARTMENTS CASCADE CONSTRAINTS;
+DROP TABLE EMPLOYEES CASCADE CONSTRAINTS;
+DROP TABLE JOB_HISTORY CASCADE CONSTRAINTS;
+DROP TABLE JOBS CASCADE CONSTRAINTS;
+drop table JOB_GRADES cascade constraints;
+
+
+
+create table REGIONS as select * from HR.REGIONS;
+create table JOBS2 as select * from HR.JOBS;
+create table COUNTRIES as select * from HR.COUNTRIES;
+create table LOCATIONS as select * from HR.LOCATIONS;
+create table DEPARTMENTS as select * from HR.DEPARTMENTS;
+create table EMPLOYEES as select * from HR.EMPLOYEES;
+create table JOB_GRADES as select * from HR.JOB_GRADES;
+create table JOB_HISTORY as select * from HR.JOB_HISTORY;
+
+create view ex1 as select concat(concat(LAST_NAME, ' '), SALARY) as  "Reward" from EMPLOYEES where (SALARY>2000 and SALARY<7000 and DEPARTMENT_ID = 20 or DEPARTMENT_ID=50) order by LAST_NAME ;
+
+create view ex2 as select LAST_NAME, HIRE_DATE, MANAGER_ID from EMPLOYEES where extract(year from HIRE_DATE) = '2005' order by HIRE_DATE;
+
+create view ex3 as select concat(concat(FIRST_NAME, ' '), LAST_NAME) as "Full_Name", SALARY, PHONE_NUMBER FROM EMPLOYEES where LAST_NAME like '__e%' and FIRST_NAME like 'Vance' order by LAST_NAME asc, FIRST_NAME asc, PHONE_NUMBER desc;
+
+create view ex4 as select FIRST_NAME, LAST_NAME, round(months_between(current_date, HIRE_DATE)) "N_OF_MONTHS",
+    case 
+    when round(months_between(current_date, HIRE_DATE)) < 149 then SALARY*0.10
+    when round(months_between(current_date, HIRE_DATE)) between 150 and 200 then SALARY*0.2
+    when round(months_between(current_date, HIRE_DATE)) > 200 then SALARY*0.3
+    else 0 end as EXTRA
+    from EMPLOYEES
+    order by N_OF_MONTHS;
+
+
+create view ex5 as select DEP_NAME, SUMA, SREDNIA  from
+ (
+    select departments.department_name as DEP_NAME, sum(EMPLOYEES.SALARY) as SUMA, round(avg(EMPLOYEES.SALARY)) as SREDNIA, min(SALARY) AS MINIMUM
+    from EMPLOYEES
+    inner join departments on EMPLOYEES.DEPARTMENT_ID = departments.department_id 
+    group by departments.department_name
+) where minimum > 5000;
+
+create view ex6 as select employees.last_name, employees.department_id, departments.department_name, employees.job_id from employees
+inner join departments on employees.department_id = departments.department_id
+inner join locations on departments.location_id = locations.location_id
+where locations.city = 'Toronto';
+
+create view ex7 as select first_name, last_name from  employees where department_id in (
+    select department_id from employees where first_name = 'Jennifer'
+    );
+    
+create view ex8 as select department_name from departments where department_id not in (
+    select department_id from employees where department_id is not null
+    );
+    
+create view ex10 as select first_name, last_name, job_id, departments.department_name, salary, job_grades.grade from employees
+inner join departments on departments.department_id = employees.department_id
+inner join job_grades on employees.salary between job_grades.min_salary and job_grades.max_salary;
+
+create view ex11 as select first_name, last_name, salary from employees where salary > (select avg(salary) from employees) order by salary;
+
+create view ex12 as select employee_id, first_name, last_name from employees where department_id in (
+    select department_id from employees where last_name like '%u%'
+    );
+

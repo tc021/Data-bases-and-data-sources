@@ -1,0 +1,22 @@
+declare
+    number_max number;
+    new_job_id number;
+    new_department_name departments.department_name%TYPE := 'EDUCATION';
+begin
+    select max(department_id) into number_max from departments;
+    dbms_output.put_line('The higest id of departments' || number_max);
+    new_job_id := number_max+10;
+    insert into departments(
+        department_id,
+        department_name,
+        manager_id,
+        location_id)
+    values(
+        new_job_id,
+        new_department_name,
+        NULL,
+        NULL);
+--    DBMS_OUTPUT.PUT_LINE(new_job_id);
+end;
+
+select * from departments where department_name like 'EDUCATION';

@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="JOBS" directorySegmentName="seg_0" id="7FB779C6-DFBE-E891-CACE-D73A181C510C">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+<schemaObject>756BC6FF-918E-7F91-98CD-B944558D3DB3</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>A2DFEE66-D711-8648-5D3A-80313383FCE1</segment>
+<tableSpace>BCE63533-849A-B44D-E882-A3EB8D70F548</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="JOB_TITLE" id="253C9921-0863-326A-D38F-BB502A21678D">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MAX_SALARY" id="83767889-8EC8-F9A9-EF4A-B3601A22C937">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="MIN_SALARY" id="B563C48E-5C9A-C0F4-B3AD-71B4F083D130">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="JOB_ID" id="BE6F27BB-9E93-4D6A-6214-F57C93748A57">
+<createdBy>Adaś Lambi</createdBy>
+<createdTime>2020-11-07 15:53:38 UTC</createdTime>
+<ownerDesignName>temp</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+</TableProxyOraclev11g>
