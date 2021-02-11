@@ -1,4 +1,4 @@
-packs <- c("rio","dplyr","ggplot2","tidyr","Hmisc","rJava","RJDBC","plyr") 
+packs <- c("rio","dplyr","ggplot2","tidyr","Hmisc","rJava","RJDBC","plyr","lubridate") 
 for(pack in packs){
   if (pack %in% rownames(installed.packages()) == FALSE) {install.packages(pack)}
 }
@@ -11,3 +11,4 @@ library(Hmisc)
 library(rJava)
 library(RJDBC)
 library(plyr)
+library(lubridate)

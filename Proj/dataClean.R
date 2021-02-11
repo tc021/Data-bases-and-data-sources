@@ -12,60 +12,72 @@ data_2015_to_2016 %>%
   apply(2, function(x) {x <- gsub(",","",x)}) %>%
   as.data.frame() %>%
   mutate(Day = Date) %>%
-  mutate(Day = as.Date(Day, format = '%m/%d/%y')) %>%
+  mutate(Day = as.Date(Date, format = '%m/%d/%Y')) %>%
   relocate(Day) %>% 
   subset(select = -Date) %>%
-  mutate_if(is.character, as.numeric) -> data_2015_to_2016
+  mutate_if(is.character, as.numeric) %>%
+  group_by(Day) %>% 
+  arrange(Day) -> data_2015_to_2016
 
 data_2016_to_2017 %>%
   apply(2, function(x) {x <- gsub("\\$", "", x)})  %>%
   apply(2, function(x) {x <- gsub(",","",x)}) %>%
   as.data.frame() %>%
   mutate(Day = Date) %>%
-  mutate(Day = as.Date(Day, format = '%m/%d/%y')) %>%
+  mutate(Day = as.Date(Date, format = '%m/%d/%Y')) %>%
   relocate(Day) %>% 
   subset(select = -Date) %>%
-  mutate_if(is.character, as.numeric) -> data_2016_to_2017
+  mutate_if(is.character, as.numeric) %>%
+  group_by(Day)  %>% 
+  arrange(Day) -> data_2016_to_2017
 
 data_2017_to_2018 %>%
   apply(2, function(x) {x <- gsub("\\$", "", x)})  %>%
   apply(2, function(x) {x <- gsub(",","",x)}) %>%
   as.data.frame() %>%
   mutate(Day = Date) %>%
-  mutate(Day = as.Date(Day, format = '%m/%d/%y')) %>%
+  mutate(Day = as.Date(Date, format = '%m/%d/%Y')) %>%
   relocate(Day) %>% 
   subset(select = -Date) %>%
-  mutate_if(is.character, as.numeric) -> data_2017_to_2018
+  mutate_if(is.character, as.numeric) %>%
+  group_by(Day)  %>% 
+  arrange(Day) -> data_2017_to_2018
 
 data_2018_to_2019 %>%
   apply(2, function(x) {x <- gsub("\\$", "", x)})  %>%
   apply(2, function(x) {x <- gsub(",","",x)}) %>%
   as.data.frame() %>%
   mutate(Day = Date) %>%
-  mutate(Day = as.Date(Day, format = '%m/%d/%y')) %>%
+  mutate(Day = as.Date(Date, format = '%m/%d/%Y')) %>%
   relocate(Day) %>% 
   subset(select = -Date) %>%
-  mutate_if(is.character, as.numeric) -> data_2018_to_2019
+  mutate_if(is.character, as.numeric) %>%
+  group_by(Day) %>% 
+  arrange(Day) -> data_2018_to_2019
 
 data_2019_to_2020 %>%
   apply(2, function(x) {x <- gsub("\\$", "", x)})  %>%
   apply(2, function(x) {x <- gsub(",","",x)}) %>%
   as.data.frame() %>%
   mutate(Day = Date) %>%
-  mutate(Day = as.Date(Day, format = '%m/%d/%y')) %>%
+  mutate(Day = as.Date(Date, format = '%m/%d/%Y')) %>%
   relocate(Day) %>% 
   subset(select = -Date) %>%
-  mutate_if(is.character, as.numeric) -> data_2019_to_2020
+  mutate_if(is.character, as.numeric) %>%
+  group_by(Day)  %>% 
+  arrange(Day) -> data_2019_to_2020
 
 data_2020_to_2021 %>%
   apply(2, function(x) {x <- gsub("\\$", "", x)})  %>%
   apply(2, function(x) {x <- gsub(",","",x)}) %>%
   as.data.frame() %>%
   mutate(Day = Date) %>%
-  mutate(Day = as.Date(Day, format = '%m/%d/%y')) %>%
+  mutate(Day = as.Date(Date, format = '%m/%d/%Y')) %>%
   relocate(Day) %>% 
   subset(select = -Date) %>%
-  mutate_if(is.character, as.numeric) -> data_2020_to_2021
+  mutate_if(is.character, as.numeric) %>%
+  group_by(Day) %>% 
+  arrange(Day) -> data_2020_to_2021
 
 
   
