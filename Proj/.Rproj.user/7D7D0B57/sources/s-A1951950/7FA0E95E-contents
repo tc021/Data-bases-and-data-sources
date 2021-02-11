@@ -1,0 +1,50 @@
+#install.packages("rio")
+#install.packages("dplyr")
+#install.packages("ggplot2")
+#install.packages(lubridate)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+movements <- rio::import(file = "data/banking.xls")
+
+movements %>%
+  mutate(date_new = date) -> movements
+
+movements %>%
+  mutate(day_of_week = wday(date_new)) %>%
+  mutate(month = month(date_new)) -> movements_clean
+
+week_decode <- data.frame(
+  day_of_week = c(1:7),
+  name_of_the_day = c("sunday","monday","tuesday","wednesday","thursday","friday","saturday"),
+  weekend = c("weekend","workday","workday","workday","workday","workday","weekend")
+)
+
+movements_clean <- merge.data.frame(movements_clean,week_decode,by="day_of_week")
+movements_clean %>%
+  group_by(month)%>%
+summarise(number_of_movements = n(),
+          sum_of_enries = sum(income, na.rm = TRUE),
+          sum_of_expenses = sum(expenditure, na.rm = TRUE)) -> monthly_summary
+
+View(monthly_summary)
+
+movements_clean %>%
+  group_by(name_of_the_day) %>%
+  summarise(number_of_movements = n(),
+            sum_of_entries = sum(income, na.rm = TRUE),
+            sum_of_expenses = sum(expenditure, na.rm= TRUE)) -> daily_summary
+View(daily_summary)            
+
+daily_summary %>%
+  ggplot(aes(x = name_of_the_day, y = number_of_movements)) +
+  geom_bar(stat = 'identity')+
+coord_flip()
+
+daily_summary %>% 
+  ggplot(aes(x = name_of_the_day, y = number_of_movements, label = number_of_movements)) +
+  geom_linerange(aes(ymin = 0, ymax= number_of_movements))+
+  geom_point(aes(size = (sum_of_entries + sum_of_expenses)/number_of_movements))+
+  geom_text(nudge_y = 1.7)+
+  
+  coord_flip()
