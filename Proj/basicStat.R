@@ -17,13 +17,11 @@ sapply(temp,FUN=mean)
 #Quartiles, median, mean visualisation
 
 melted_temp <- melt(temp)
-ggplot(melted_temp, a)
-plot(value ~ variable, data = melted_temp)
-
 ggplot(melted_temp, aes(x =variable, y= value)) +
-  geom_boxplot(outlier.colour = 'red', outlier.size = 4, notch = TRUE) +
+  geom_boxplot(outlier.colour = 'red', notch = TRUE) +
+  scale_y_log10()+
   coord_flip() +
-  stat_summary(fun = mean, geom = "point", shape = 5, size = 5) +
+  stat_summary(fun = mean, geom = "point", shape = 5, size = 3) +
   scale_color_grey() +
   theme_classic() +
   labs(title = "Basic statistics of whole Data", y = "Count", x = "Column")

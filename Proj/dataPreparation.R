@@ -1,7 +1,7 @@
 source("dataExport.R")
 
 #Quartiles 
-df <- rbind(df2015,df2016,df2017,df2018,df2019, df2020)
+df <- rbind(df2015,df2016,df2017,df2018,df2019, df2020,df2021)
 
 df %>% 
   mutate(day_of_week = wday(DAY)) %>%
